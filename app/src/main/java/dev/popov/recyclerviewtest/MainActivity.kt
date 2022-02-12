@@ -1,8 +1,8 @@
 package dev.popov.recyclerviewtest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import dev.popov.recyclerviewtest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         init()
     }
     private fun init() = with(binding){
-        rcView.layoutManager = LinearLayoutManager(this@MainActivity)
+        rcView.layoutManager = GridLayoutManager(this@MainActivity, 3)
         rcView.adapter = adapter
         adapter.addViewItem(item = DataForRV)
     }

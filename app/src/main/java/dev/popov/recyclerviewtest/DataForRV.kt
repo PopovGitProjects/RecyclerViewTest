@@ -14,15 +14,15 @@ object DataForRV {
         R.drawable.img_10,
     )
     val textItem = arrayListOf(
-        "Text_1",
-        "Text_2",
-        "Text_3",
-        "Text_4",
-        "Text_5",
-        "Text_6",
-        "Text_7",
-        "Text_8",
-        "Text_9",
-        "Text_10",
+        "Image 1",
+        "Image 2",
+        "Image 3",
+        "Image 4",
+        "Image 5",
+        "Image 6",
+        "Image 7",
+        "Image 8",
+        "Image 9",
+        "Image 10",
     )
 }

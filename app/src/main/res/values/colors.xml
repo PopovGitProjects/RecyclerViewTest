@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lemon_100">#F0F4C3</color>
     <color name="blue_100">#BBDEFB</color>
+    <color name="blue_900">#01579B</color>
+    <color name="blue_700">#1976D2</color>
 </resources>
