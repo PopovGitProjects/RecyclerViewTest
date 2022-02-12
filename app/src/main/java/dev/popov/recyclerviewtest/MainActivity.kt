@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         init()
     }
     private fun init() = with(binding){
-        rcView.layoutManager = GridLayoutManager(this@MainActivity, 3)
+        rcView.layoutManager = GridLayoutManager(this@MainActivity, 2)
         rcView.adapter = adapter
         adapter.addViewItem(item = DataForRV)
     }
