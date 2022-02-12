@@ -30,12 +30,11 @@ class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
         return data.size
     }
     fun addViewItem(item: DataForRV){
-        for (i in 1 until item.imageID.size){
-            for (j in 1 until item.textItem.size){
-                val dataItem = Model(item.imageID[i], item.textItem[j])
-                data.add(dataItem)
-            }
+        for (i in item.imageID){
+            val dataItem = Model(item.imageID[i], item.textItem[i])
+            data.add(dataItem)
         }
         notifyDataSetChanged()
     }
+
 }
