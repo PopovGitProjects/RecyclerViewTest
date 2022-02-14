@@ -29,10 +29,8 @@ class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
     override fun getItemCount(): Int {
         return data.size
     }
-    fun addViewItem(item: DataForRV){
-        for (i in 0 until item.imageID.size){
-            data.add(Model(item.imageID[i], item.textItem[i]))
-        }
+    fun addViewItem(item: Model){
+        data.add(item)
         notifyDataSetChanged()
     }
 

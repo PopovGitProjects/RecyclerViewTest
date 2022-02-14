@@ -3,4 +3,10 @@
     <string name="tv">tv</string>
     <string name="image">image</string>
     <string name="image_2">image_2</string>
+    <string name="image2">Image</string>
+    <string name="done">Done</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="btNextImg">Next Image</string>
+    <string name="add_item">Add Item</string>
 </resources>

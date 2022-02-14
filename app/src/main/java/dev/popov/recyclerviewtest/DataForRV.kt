@@ -13,16 +13,4 @@ object DataForRV {
         R.drawable.img_9,
         R.drawable.img_10,
     )
-    val textItem = arrayListOf(
-        "Image 1",
-        "Image 2",
-        "Image 3",
-        "Image 4",
-        "Image 5",
-        "Image 6",
-        "Image 7",
-        "Image 8",
-        "Image 9",
-        "Image 10",
-    )
 }
