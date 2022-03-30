@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import dev.popov.recyclerviewtest.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Adapter.Listener {
 
     private lateinit var binding: ActivityMainBinding
-    private val adapter = Adapter()
+    private val adapter = Adapter(this)
     private var editLauncher: ActivityResultLauncher<Intent>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +34,12 @@ class MainActivity : AppCompatActivity() {
         btAdd.setOnClickListener {
             editLauncher?.launch(Intent(this@MainActivity, EditActivity::class.java))
         }
+    }
+
+    override fun onClick(item: Model) {
+        startActivity(Intent(this, ContentActivity::class.java).apply {
+            putExtra("item", item)
+        })
     }
 
 }

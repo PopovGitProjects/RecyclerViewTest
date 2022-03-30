@@ -6,13 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.popov.recyclerviewtest.databinding.RvItemBinding
 
-class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(private val listener: Listener): RecyclerView.Adapter<Adapter.ViewHolder>() {
     private var data = ArrayList<Model>()
     class ViewHolder(item: View): RecyclerView.ViewHolder(item) {
         private val binding = RvItemBinding.bind(item)
-        fun bind(data: Model) = with(binding){
+        fun bind(data: Model, listener: Listener) = with(binding){
             imageGen.setImageResource(data.imageID)
             textTitle.text = data.title
+            itemView.setOnClickListener {
+                listener.onClick(data)
+            }
         }
     }
 
@@ -23,7 +26,7 @@ class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(data[position], listener)
     }
 
     override fun getItemCount(): Int {
@@ -32,6 +35,10 @@ class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
     fun addViewItem(item: Model){
         data.add(item)
         notifyDataSetChanged()
+    }
+
+    interface Listener{
+        fun onClick(item: Model)
     }
 
 }
